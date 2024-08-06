@@ -31,7 +31,7 @@ class AirQualityViewModel: ObservableObject {
     @Published var airQuality: AirQualityData?
 
     func getData(lat: Double, lon: Double) async throws -> AirQualityData {
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/air_pollution?lat=\(lat)&lon=\(lon)&appid=ce65d33565a96c3f599f0392458c5e6b")
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/air_pollution?lat=\(lat)&lon=\(lon)&appid=API_KEY")
         let session = URLSession(configuration: .default)
         
         let (data, _) = try await session.data(from: url!)
